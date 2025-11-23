@@ -1,0 +1,77 @@
+In this step Installation Proccess is Done 
+1.Python
+NOTE:Python can be installed or if your comfortable you can use in VS(Visual Studio)
+TO install Python this is the procedure
+a.Go to the official Python website
+Visit: https://www.python.org/downloads/....
+
+b.Download the latest version
+Click on the “Download Python” button for your operating system (Windows/Mac/Linux)
+
+c.Run the installer
+Open the downloaded file.
+
+d.Start the installation
+Click Install Now and wait until the setup finishes.
+
+2.Node.js
+a.Go to the official Node.js website
+Visit: https://nodejs.org/
+
+b.Download Node.js LTS version
+Click on the “LTS” (Recommended) download button.
+This version is stable and suitable for most projects.
+
+c.Run the installer (setup file)
+Open the downloaded file and follow the instructions.
+
+d.Accept the license agreement
+Click Next and choose the default installation options.
+
+e.Start the installation
+Click Install and wait for the setup to finish.
+
+3.Git 
+NOTE:Git can be used alternatively in VS
+a.Go to the official Git website
+Visit: https://git-scm.com/
+
+b.Download Git
+Click on “Download for Windows” (or your OS).
+
+c.Run the installer
+Open the downloaded setup file.
+
+d.Select default options
+Keep everything as default unless you know what to change.
+
+e.Complete the installation
+Click Install → Finish.
+
+4.Docker Desktop
+a.Visit the Docker website
+Go to: https://www.docker.com/products/docker-desktop/
+
+b.Download Docker Desktop
+Choose the version for your OS (Windows/Mac).
+
+c.Run the installer
+Open the downloaded file.
+
+d.Follow the setup steps
+Click Next, accept terms, and install.
+
+5.VS(Visual Studio)
+a.Go to the official VS Code website
+Visit: https://code.visualstudio.com/
+
+b.Download VS Code
+Select the version for your OS.
+
+c.Run the installer
+Open the setup file.
+
+d.Accept license and choose default settings
+Finish installation
+
+first task to completed
