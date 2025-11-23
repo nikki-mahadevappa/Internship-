@@ -1,0 +1,34 @@
+In this step, I created all the required accounts that I will use throughout the project. These platforms help with version control, cloud services, backend setup, and AI tasks.
+
+A.Creating a GitHub Account
+
+1.Go to https://github.com/
+2.Click Sign up
+3.Enter whatever personal information will be asked 
+4.Create account
+Log in and set up your profile
+→ Now you can create repositories and push your code.
+
+B.Creating a Google Cloud Account (for Firebase & Cloud Run)
+
+1.Visit https://cloud.google.com/
+2.Click Get Started for Free(google cloud can deduct 1 ruppee or it might be free depends)
+3.Sign in with your Google account email id 
+After setup:
+Open Google Cloud Console
+You can access Firebase, Cloud Run, and other services.
+
+C.Creating a Supabase Account
+
+1.Go to https://supabase.com/
+2.Click Start your project
+3.Sign in using GitHub or email
+4.Create a new project inside the dashboard
+5.Supabase is now ready for database and authentication tasks.
+
+D.Creating a Hugging Face Account
+
+1.Visit https://huggingface.co/
+Create an account using email or GitHub login
+
+Now you can access models, datasets, and create API tokens.
