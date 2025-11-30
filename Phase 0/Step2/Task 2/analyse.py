@@ -1,1 +1,59 @@
+import os, glob
+import pandas as pd
+import numpy as np
 
+folder = r"C:\Users\Lenovo\csv"  # <-- your folder
+files = glob.glob(os.path.join(folder, "*.csv"))
+print("Found files:", len(files))
+
+for f in files[:10]:
+    print(" -", os.path.basename(f))
+
+# safe read
+def safe_read(f):
+    for enc in ("latin1", "cp1252", "utf-8"):
+        try:
+            return pd.read_csv(f, encoding=enc, on_bad_lines='skip')
+        except:
+            pass
+    print("Failed to read:", f)
+
+dfs = []
+for f in files:
+    d = safe_read(f)
+    if d is not None:
+        d['__source'] = os.path.basename(f)
+        dfs.append(d)
+
+df = pd.concat(dfs, ignore_index=True)
+
+# detect cols
+LYRICS_COL = "Lyric"  
+ARTIST_COL = "Artist" 
+
+def clean_lyrics(text):
+    if pd.isna(text):
+        return ""
+    s = str(text).lower()
+    s = pd.Series([s]).str.replace(r"[^a-z0-9\s\n]", "", regex=True).iloc[0]
+    return s
+
+def words_per_line(lyrics_text):
+    if not lyrics_text:
+        return []
+    lines = [line.strip() for line in str(lyrics_text).splitlines() if line.strip()]
+    return [len(line.split()) for line in lines]
+
+df['lyrics_clean'] = df[LYRICS_COL].apply(clean_lyrics)
+df['wpl_list'] = df['lyrics_clean'].apply(words_per_line)
+df['lyrical_density'] = df['wpl_list'].apply(lambda L: np.mean(L) if L else np.nan)
+
+artist_stats = df.groupby(ARTIST_COL).agg(
+    songs_count=('lyrical_density','count'),
+    avg_lyrical_density=('lyrical_density','mean'),
+    median_lyrical_density=('lyrical_density','median'),
+    std_lyrical_density=('lyrical_density','std')
+)
+
+artist_stats.to_csv("artist_lyrical_density.csv")
+print("Saved artist_lyrical_density.csv")
