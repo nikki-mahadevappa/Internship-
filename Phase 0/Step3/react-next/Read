@@ -1,0 +1,29 @@
+This project is part of Phase 0 – Step 3 of my internship learning program.
+The task focuses on understanding the basics of React, Next.js, and TypeScript.
+
+A simple Lyric Sheet component is created to display a song title and lyrics.
+
+- Learn React components and props
+- Understand Next.js page routing
+- Use TypeScript for type safety
+- Build a reusable UI component
+
+- React.js
+- Next.js
+- TypeScript
+- Tailwind CSS
+
+components/
+- LyricSheet.tsx
+
+pages/
+- index.tsx
+
+The LyricSheet component is a reusable React component that receives a Song object as a prop.
+The Next.js page (index.tsx) creates the Song object and passes it to the component.
+
+This task helped in understanding how React components work inside a Next.js application using TypeScript.
+
+Niharika M  
+B.Tech – Information Science  
+Internship
