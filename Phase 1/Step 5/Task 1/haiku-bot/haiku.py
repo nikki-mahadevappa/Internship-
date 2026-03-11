@@ -1,7 +1,8 @@
 from google import genai
 
 # Create Gemini client with your API key
-client = genai.Client(api_key="AIzaSyC********")
+import os
+client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def generate_haiku(word):
     prompt = f"""
@@ -21,4 +22,5 @@ def generate_haiku(word):
 word = input("Enter a word: ")
 print("\nYour Haiku:\n")
 print(generate_haiku(word))
+
 
